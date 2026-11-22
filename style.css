@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef1f6;
+    color: #333;
+}
+
+header {
+    background-color: #1a237e;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header p {
+    margin-top: 6px;
+    color: #c5cae9;
+}
+
+nav {
+    background-color: #283593;
+    text-align: center;
+    padding: 10px;
+}
+
+nav button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 4px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #f4511e;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 30px auto;
+}
+
+.section {
+    display: none;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #1a237e;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #1a237e;
+    margin-bottom: 5px;
+}
+
+.table-box {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #1a237e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    margin-top: 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3949ab;
+}
+
+.ticket {
+    border: 2px dashed #1a237e;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #fafafa;
+    max-width: 450px;
+}
+
+.ticket p {
+    margin: 6px 0;
+}
+
+.success {
+    color: green;
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    margin-top: 15px;
+}
+
+.note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.file-box {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.seat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+.seat {
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.free {
+    background-color: #43a047;
+}
+
+.booked {
+    background-color: #e53935;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    nav button {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    th, td {
+        padding: 6px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>&#128646; Railway Reservation System</h1>
+        <p>C Programming Project - Web Version</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('trains')">Trains</button>
+        <button onclick="showSection('book')">Book Ticket</button>
+        <button onclick="showSection('cancel')">Cancel Ticket</button>
+        <button onclick="showSection('display')">All Reservations</button>
+        <button onclick="showSection('search')">Search PNR</button>
+        <button onclick="showSection('seats')">Seat Availability</button>
+    </nav>
+
+    <div class="container">
+
+        <!-- trains list -->
+        <div id="trains" class="section">
+            <h2>Available Trains</h2>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr><th>Train No</th><th>Train Name</th><th>From</th><th>To</th><th>Fare</th></tr>
+                    </thead>
+                    <tbody id="trainTable"></tbody>
+                </table>
+            </div>
+            <p class="note">Each train has 30 seats. Below 5 years free, 5-11 years half ticket, 60+ get 30% discount.</p>
+        </div>
+
+        <!-- booking -->
+        <div id="book" class="section">
+            <h2>Book Ticket</h2>
+            <label>Train</label>
+            <select id="bookTrain"></select>
+
+            <label>Journey Date</label>
+            <input type="date" id="bookDate">
+
+            <label>Passenger Name</label>
+            <input type="text" id="pName" maxlength="30" placeholder="Enter full name">
+
+            <label>Age</label>
+            <input type="number" id="pAge" min="1" max="120" placeholder="Enter age">
+
+            <label>Gender</label>
+            <select id="pGender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="O">Other</option>
+            </select>
+
+            <button class="btn" onclick="bookTicket()">Book Ticket</button>
+            <div id="bookResult"></div>
+        </div>
+
+        <!-- cancel -->
+        <div id="cancel" class="section">
+            <h2>Cancel Ticket</h2>
+            <label>PNR Number</label>
+            <input type="number" id="cancelPnr" placeholder="Enter PNR">
+            <button class="btn" onclick="cancelTicket()">Cancel Ticket</button>
+            <p class="note">20% cancellation charge will be deducted.</p>
+            <div id="cancelResult"></div>
+        </div>
+
+        <!-- all reservations -->
+        <div id="display" class="section">
+            <h2>All Reservations</h2>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr><th>PNR</th><th>Name</th><th>Age</th><th>Gender</th><th>Train</th><th>Seat</th><th>Date</th><th>Fare</th></tr>
+                    </thead>
+                    <tbody id="ticketTable"></tbody>
+                </table>
+            </div>
+            <p id="totalText"></p>
+
+            <div class="file-box">
+                <h3>bookings.txt (C program file)</h3>
+                <p class="note">Load the bookings.txt made by the C program, or download this data in the same format.</p>
+                <input type="file" id="fileInput" accept=".txt">
+                <button class="btn" onclick="importFile()">Load File</button>
+                <button class="btn" onclick="downloadFile()">Download bookings.txt</button>
+            </div>
+        </div>
+
+        <!-- search -->
+        <div id="search" class="section">
+            <h2>Search Ticket</h2>
+            <label>PNR Number</label>
+            <input type="number" id="searchPnr" placeholder="Enter PNR">
+            <button class="btn" onclick="searchTicket()">Search</button>
+            <div id="searchResult"></div>
+        </div>
+
+        <!-- seat availability -->
+        <div id="seats" class="section">
+            <h2>Seat Availability</h2>
+            <label>Train</label>
+            <select id="seatTrain"></select>
+
+            <label>Date</label>
+            <input type="date" id="seatDate">
+
+            <button class="btn" onclick="checkSeats()">Check</button>
+            <div id="seatResult"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        Made by Piyush Kumar | C Programming Project
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
