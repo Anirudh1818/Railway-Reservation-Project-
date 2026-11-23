@@ -3,7 +3,7 @@
     C Programming Project - 12
     Concepts used : Arrays, Structures, File Handling
 
-    Name : Piyush Kumar
+    Name : Anirudh Saxena
 */
 
 #include<stdio.h>
@@ -165,7 +165,8 @@ void bookTicket(){
     }
 
     printf("Enter passenger name: ");
-    scanf(" %[^\n]",t.name);
+    scanf(" %[^
+]",t.name);
     // comma will break the file so replacing it with space
     for(i=0;t.name[i]!='\0';i++){
         if(t.name[i]==',')
